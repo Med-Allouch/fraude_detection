@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from typing import Optional
 
 class ClaimBase(BaseModel):
     id: int
@@ -11,11 +10,4 @@ class ClaimBase(BaseModel):
     charges: str
 
 
-class ClaimCreate(ClaimBase):
-    pass
 
-class Claim(ClaimBase):
-    id: int
-
-    class Config:
-        orm_mode = True
